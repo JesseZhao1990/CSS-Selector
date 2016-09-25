@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Css-selector by JesseZhao1990</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Css-selector</h1>
+      <h2 class="project-tagline">总结CSS选择器</h2>
+      <a href="https://github.com/JesseZhao1990/CSS-Selector" class="btn">View on GitHub</a>
+      <a href="https://github.com/JesseZhao1990/CSS-Selector/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/JesseZhao1990/CSS-Selector/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="css选择器" class="anchor" href="#css%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>css选择器</h1>
+
+<h2>
+<a id="1选择所有元素" class="anchor" href="#1%E9%80%89%E6%8B%A9%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.选择所有元素</h2>
+
+<p>选择器：*</p>
+
+<h2>
+<a id="2根据类型选择元素" class="anchor" href="#2%E6%A0%B9%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.根据类型选择元素</h2>
+
+<p>选择器：&lt;元素类型&gt;。比如</p>
+
+<pre><code>a{
+    font-size:20px;
+}
+
+</code></pre>
+
+<h2>
+<a id="3根据类选择元素" class="anchor" href="#3%E6%A0%B9%E6%8D%AE%E7%B1%BB%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.根据类选择元素</h2>
+
+<p>选择器: &lt;类名&gt; or &lt;元素类型&gt;.&lt;类名&gt;</p>
+
+<pre><code>.class-name{
+    font-size:20px;
+}
+
+span.class-name{
+    font-size:20px;
+}
+
+</code></pre>
+
+<h2>
+<a id="4根据id选择元素" class="anchor" href="#4%E6%A0%B9%E6%8D%AEid%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.根据ID选择元素</h2>
+
+<p>选择器: #</p>
+
+<pre><code>.id-name{
+    font-size:20px;
+}
+
+</code></pre>
+
+<h2>
+<a id="5根据属性选择元素" class="anchor" href="#5%E6%A0%B9%E6%8D%AE%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5.根据属性选择元素</h2>
+
+<p>选择器:[&lt;条件&gt;] 或则 &lt;元素类型&gt;[&lt;条件&gt;]</p>
+
+<p>常用的有：</p>
+
+<ul>
+<li>  [attr]  选择定义attr属性的元素</li>
+<li>  [attr="val"] </li>
+<li>  [attr^="val"] </li>
+<li>  [attr$="val"] </li>
+<li>  [attr*="val"] </li>
+<li>  [attr~="val"] </li>
+<li>  [attr|="val"]<br>
+</li>
+</ul>
+
+<h2>
+<a id="6并集选择器" class="anchor" href="#6%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6.并集选择器</h2>
+
+<p>选择器:&lt;选择器&gt;,&lt;选择器&gt;,&lt;选择器&gt;</p>
+
+<pre><code>
+a, span, h2{
+    color:red;
+}
+
+</code></pre>
+
+<h2>
+<a id="7后代选择器" class="anchor" href="#7%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7.后代选择器</h2>
+
+<p>选择器:&lt;第一个选择器&gt; &lt;第二个选择器&gt;</p>
+
+<pre><code>    p span{
+    font-size:20px;
+    }
+
+</code></pre>
+
+<h2>
+<a id="8选择子元素" class="anchor" href="#8%E9%80%89%E6%8B%A9%E5%AD%90%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>8.选择子元素</h2>
+
+<p>选择器:&lt;第一个选择器&gt; &gt; &lt;第二个选择器&gt;</p>
+
+<pre><code>    p &gt; span{
+    font-size:20px;
+    }
+
+</code></pre>
+
+<h2>
+<a id="9选择兄弟元素" class="anchor" href="#9%E9%80%89%E6%8B%A9%E5%85%84%E5%BC%9F%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>9.选择兄弟元素</h2>
+
+<ul>
+<li>  选择器:&lt;第一个选择器&gt; + &lt;第二个选择器&gt;</li>
+</ul>
+
+<pre><code>    p + span{
+    font-size:20px;
+    }
+
+</code></pre>
+
+<ul>
+<li>  选择器:&lt;第一个选择器&gt; ~ &lt;第二个选择器&gt;</li>
+</ul>
+
+<pre><code>    p ~ span{
+    font-size:20px;
+    }
+
+</code></pre>
+
+<h2>
+<a id="10first-line-选择器" class="anchor" href="#10first-line-%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>10.::first-line 选择器</h2>
+
+<pre><code>::first-line{
+    background-color:red;
+}
+
+</code></pre>
+
+<h2>
+<a id="11first-letter-选择器" class="anchor" href="#11first-letter-%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>11.::first-letter 选择器</h2>
+
+<pre><code>::first-letter{
+    background-color:red;
+}
+
+</code></pre>
+
+<h2>
+<a id="12before选择器" class="anchor" href="#12before%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>12.:before选择器</h2>
+
+<pre><code>:before{
+    content:"i am before";
+}
+
+</code></pre>
+
+<h2>
+<a id="13after选择器" class="anchor" href="#13after%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>13.:after选择器</h2>
+
+<pre><code>:after{
+    content:"i am after";
+}
+
+</code></pre>
+
+<h2>
+<a id="14子元素选择器" class="anchor" href="#14%E5%AD%90%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>14.子元素选择器</h2>
+
+<ul>
+<li>  :fist-child</li>
+<li>  :last-child</li>
+<li>  :only-child</li>
+<li><p>:only-of-type</p></li>
+<li><p>:nth-child(n)</p></li>
+<li>  :nth-last-child(n)</li>
+<li>  :nth-of-type(n)</li>
+<li>  :nth-last-of-type(n)</li>
+</ul>
+
+<h2>
+<a id="15ui伪类选择器" class="anchor" href="#15ui%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>15.UI伪类选择器</h2>
+
+<ul>
+<li>  :enabled</li>
+<li>  :disabled</li>
+<li>  :checked</li>
+<li>  :default</li>
+<li>  :valid</li>
+<li>  :invalid</li>
+<li>  :in-range</li>
+<li>  :out-of-range</li>
+<li>  :required</li>
+</ul>
+
+<h2>
+<a id="16动态伪类选择器" class="anchor" href="#16%E5%8A%A8%E6%80%81%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>16.动态伪类选择器</h2>
+
+<ul>
+<li>  :link</li>
+<li>  :visited</li>
+<li>  :hover</li>
+<li>  :active</li>
+<li>  :focus</li>
+</ul>
+
+<h2>
+<a id="17否定选择器" class="anchor" href="#17%E5%90%A6%E5%AE%9A%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>17.否定选择器</h2>
+
+<p>:not(&lt;选择器&gt;)  </p>
+
+<p>非常实用但是常常被忽略的一种选择器</p>
+
+<h2>
+<a id="18empty选择器" class="anchor" href="#18empty%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>18.:empty选择器</h2>
+
+<p>匹配没有定义任何子元素的元素。</p>
+
+<h2>
+<a id="19-target选择器" class="anchor" href="#19-target%E9%80%89%E6%8B%A9%E5%99%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>19. :target选择器</h2>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/JesseZhao1990/CSS-Selector">Css-selector</a> is maintained by <a href="https://github.com/JesseZhao1990">JesseZhao1990</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
